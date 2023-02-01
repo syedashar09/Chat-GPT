@@ -1,0 +1,63 @@
+<div class="App">
+  <aside class="sidemenu">
+    <div class="sidemenu-button">
+      <span>+</span>
+      New Text
+    </div>
+  </aside>
+
+  <section class="chat-box">
+    <div class="chat-logo">
+      <div class="chat-message">
+        <div class="chat-center">
+          <div class="avatar">
+            <span class="material-icons" id="account-gpt">
+              account_circle
+            </span>
+          </div>
+          <div class="message" id="prop">
+            <span> profile name here</span>
+          </div>
+        </div>
+      </div>
+      <div class="chat-message-gpt">
+        <div class="chat-center">
+          <div class="avatar-gpt">
+            <span class="material-icons" id="material-gpt"> smart_toy </span>
+          </div>
+          <div class="message">
+            {{ this.myform.value }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chatInput-holder">
+      <form [formGroup]="myform" (ngSubmit)="handleSubmit()">
+        <input class="chatInput-text" type="text" formControlName="input" />
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="chat-container">
+      <div class="chat-header">
+        <h3>Chat App</h3>
+      </div>
+      <div class="chat-body">
+        <div class="message-container">
+          <div *ngFor="let message of messages">
+            <div class="message" [ngClass]="{ mine: message.isMine }">
+              {{ message.content }}
+            </div>
+          </div>
+        </div>
+        <div class="message-input-container">
+          <input
+            type="text"
+            [(ngModel)]="newMessage"
+            (keyup.enter)="sendMessage()"
+          />
+          <button (click)="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div> -->
