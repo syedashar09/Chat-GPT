@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class SocketioService {
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   // sendPostRequest(apiUrl: string, requestBody: any) {
   //   return this.http.post(apiUrl, requestBody);
