@@ -21,17 +21,16 @@ export class AppComponent {
   ) {
     console.log(this.myform.value);
   }
-  myform: any;
   ngOnInit() {
     //    myform = this.formbuilder.group({
     //   input: new FormControl(''),
     // });
 
-    this.myform = new FormGroup({
+   
+  }
+ myform = new FormGroup({
       input: new FormControl(''),
     });
-  }
-
   handleSubmit() {
     this.SocketService.sendPostRequest(
       'https://api.openai.com/v1/engines/davinci-codex/completions',
