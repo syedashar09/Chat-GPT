@@ -11,36 +11,26 @@ const SOCKET_ENDPOINT = 'http://localhost:3000';
 })
 export class AppComponent {
   title = 'codex-frontEnd';
-  messages: any = [];
-  newMessage = '';
-  text: any;
-  socket: any;
+
   constructor(
     private SocketService: SocketioService,
     private formbuilder: FormBuilder
-  ) {
-    console.log(this.myform.value);
-  }
-  ngOnInit() {
-    //    myform = this.formbuilder.group({
-    //   input: new FormControl(''),
-    // });
+  ) {}
+  ngOnInit() {}
 
-   
-  }
- myform = new FormGroup({
-      input: new FormControl(''),
-    });
-  handleSubmit() {
-    this.SocketService.sendPostRequest(
-      'https://api.openai.com/v1/engines/davinci-codex/completions',
-      {
-        prompt: '{this.myform.value}',
-      }
-    ).subscribe((response) => {
-      console.log(response);
-    });
-  }
+  myform = new FormGroup({
+    input: new FormControl(''),
+  });
+  // handleSubmit() {
+  //   this.SocketService.sendPostRequest(
+  //     'https://api.openai.com/v1/engines/davinci-codex/completions',
+  //     {
+  //       prompt: '{this.myform.value}',
+  //     }
+  //   ).subscribe((response) => {
+  //     console.log(response);
+  //   });
+  // }
 
   // async handleSubmit() {
   //   console.log('submit' + JSON.stringify(this.myform.value));

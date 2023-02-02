@@ -8,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class SocketioService {
   constructor(private http: HttpClient) {}
 
-  sendPostRequest(apiUrl: string, requestBody: any) {
-    return this.http.post(apiUrl, requestBody);
-  }
+  // sendPostRequest(apiUrl: string, requestBody: any) {
+  //   return this.http.post(apiUrl, requestBody);
+  // }
   // private apiUrl =
   //   'https://api.openai.com/v1/engines/davinci-codex/completions';
   // constructor(private http: HttpClient) {}
