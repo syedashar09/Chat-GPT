@@ -21,7 +21,7 @@ export class AppComponent {
   myform = new FormGroup({
     input: new FormControl(''),
   });
-  // handleSubmit() {
+  handleSubmit() {}
   //   this.SocketService.sendPostRequest(
   //     'https://api.openai.com/v1/engines/davinci-codex/completions',
   //     {
